@@ -1,15 +1,7 @@
 var express = require('express');
 
 var app = express();
-
-var proverbs = [
-  "Cine se scoala de dimineata, cade singur in ea.",
-  "Cine alearga dupa doi iepuri, se aduna.",
-  "Cine se aseamana, nu prinde nici unul",
-  "Cum iti asterni, cel cu un ochi este imparat",
-  "In tara orbilor, asa dormi"
-];
-
+var proverb = require('./lib/proverb.js');
 var handlebars = require('express3-handlebars')
   .create({ defaultLayout: 'main' });
 app.engine('handlebars', handlebars.engine);
@@ -25,8 +17,7 @@ app.get('/', function(req, res) {
 
 app.get('/about', function(req, res) {
   var randomProverb = 
-    proverbs[Math.floor(Math.random() * proverbs.length)];
-  res.render('about', { proverb: randomProverb });
+  res.render('about', { proverb: proverb.getProverb() });
 });
 
 // custom 404 page
