@@ -2,7 +2,7 @@ var express = require('express');
 
 var app = express();
 var proverb = require('./lib/proverb.js');
-var handlebars = require('express3-handlebars')
+var handlebars = require('express-handlebars')
   .create({ defaultLayout: 'main' });
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
