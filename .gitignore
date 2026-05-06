@@ -1,2 +1,6 @@
 # ingnore packages installed by npm
 node_modules
+
+# Playwright generated artifacts
+playwright-report
+test-results

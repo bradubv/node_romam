@@ -1,8 +1,8 @@
-var express = require('express');
+const express = require('express');
 
-var app = express();
-var proverb = require('./lib/proverb.js');
-var handlebars = require('express-handlebars')
+const app = express();
+const proverb = require('./lib/proverb.js');
+const handlebars = require('express-handlebars')
   .create({ defaultLayout: 'main' });
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
@@ -14,7 +14,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(function(req, res, next) {
   res.locals.showTests = app.get('env') !== 'production' &&
     req.query.test === '1';
-    next();
+  next();
 });
 
 app.get('/', function(req, res) {
@@ -22,7 +22,6 @@ app.get('/', function(req, res) {
 });
 
 app.get('/about', function(req, res) {
-  var randomProverb = 
   res.render('about', { 
     proverb: proverb.getProverb(),
     pageTestScript: '/qa/tests-about.js' 

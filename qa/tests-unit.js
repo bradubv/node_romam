@@ -3,6 +3,6 @@ var expect = require('chai').expect;
 
 suite('Proverb tests', function() {
   test('getProverb() should return a proverb', function() {
-    expect(typeof proverb.getProverb() === 'string');
+    expect(proverb.getProverb()).to.be.a('string');
   });
 });
