@@ -18,7 +18,8 @@
   "overrides": {
     "diff": "^8.0.3",
     "js-yaml": "^4.1.1",
-    "serialize-javascript": "^7.0.0"
+    "serialize-javascript": "^7.0.0",
+    "brace-expansion": "^4.0.1"
   },
   "scripts": {
     "start": "node romam.js",
