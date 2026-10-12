@@ -11,15 +11,19 @@
     "express-handlebars": "^9.0.1"
   },
   "devDependencies": {
-    "@playwright/test": "^1.54.2",
+    "@playwright/test": "^1.64.0",
     "chai": "^6.2.2",
     "mocha": "^11.7.5"
   },
   "overrides": {
+    "brace-expansion@2": "^2.1.7",
+    "brace-expansion@5": "^5.0.12",
     "diff": "^8.0.3",
-    "js-yaml": "^4.3.1",
+    "handlebars": "^4.7.10",
+    "js-yaml": "^4.3.2",
+    "proxy-addr": "^2.0.8",
     "serialize-javascript": "^7.0.0",
-    "qs": "6.15.2"
+    "qs": "^6.16.0"
   },
   "scripts": {
     "start": "node romam.js",
@@ -33,5 +37,8 @@
     "professional"
   ],
   "author": "Bogdan V. Bradu",
-  "license": "ISC"
+  "license": "ISC",
+  "allowScripts": {
+    "fsevents@2.3.2": true
+  }
 }
